@@ -1,3 +1,13 @@
+/*
+* File: app.js
+* Author: Szász Benedek
+* Copyright: 2026, Szász Benedek
+* Group: Szoft I N
+* Date: 2026-04-29
+* Github: https://github.com/BenedekSzasz/
+* Licenc: MIT
+*/
+
 import * as bootstrap from 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
