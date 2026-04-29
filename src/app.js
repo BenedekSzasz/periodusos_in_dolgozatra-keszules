@@ -11,7 +11,7 @@
 import * as bootstrap from 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
-
+import Swal from 'sweetalert2'
 
 const elementList = [
     { nev: 'Hidrogén', vegyjel: 'H', rendszam: 1, atomtomeg: 1.008, allapot: 'Gáz' },
@@ -26,8 +26,18 @@ const elementList = [
 
 const doc = {
     tbody: document.querySelector('#tbody'),
-    resultDiv: document.querySelector('#result')
+    resultDiv: document.querySelector('#result'),
+    aboutButton: document.querySelector('#aboutButton')
 }
+
+doc.aboutButton.addEventListener('click', () => {
+    Swal.fire({
+        title: 'Névjegy',
+        text: 'Szász Benedek, Szoft I N, 2026',
+        icon: 'info',
+        confirmButtonText: 'OK'
+    })
+})
 
 function render(elemek) {
     var rows = "";
