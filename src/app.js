@@ -40,13 +40,16 @@ function render(elemek) {
     doc.tbody.innerHTML = rows;
 }
 
-function renderCountedValues() {
+function renderCountedValues(elemek) {
     let count = 0;
-    for(elem of elemek){
+    for(let elem of elemek){
         if(elem.allapot == "Gáz"){
             count++;
         }
     }
-    doc.resultDiv.innerHTML = count
+    console.log("count: " + count)
+    let msg = "Gáz állapotú elemek: "
+    doc.resultDiv.innerHTML = msg + count
 }
 render(elementList);
+renderCountedValues(elementList);
